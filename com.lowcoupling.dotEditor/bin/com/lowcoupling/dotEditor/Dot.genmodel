@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.lowcoupling.dotEditor/src-gen" editDirectory="/com.lowcoupling.dotEditor.edit/src"
+    editorDirectory="/com.lowcoupling.dotEditor.editor/src" modelPluginID="com.lowcoupling.dotEditor"
+    forceOverwrite="true" modelName="Dot" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.lowcoupling.dotEditor.edit"
+    editorPluginID="com.lowcoupling.dotEditor.editor" runtimeVersion="2.9">
+  <genPackages prefix="Dot" basePackage="com.lowcoupling.dotEditor" disposableProviderFactory="true"
+      fileExtensions="dot" ecorePackage="Dot.ecore#/">
+    <genClasses ecoreClass="Dot.ecore#//GraphModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//GraphModel/graph"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//Graph">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//Graph/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//UndirectedGraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//UndirectedGraph/edge"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//DirectedGraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//DirectedGraph/edge"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//UnDirectedEdge">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//UnDirectedEdge/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//UnDirectedEdge/tgt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//UnDirectedEdge/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//DirectedEdge">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//DirectedEdge/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//DirectedEdge/tgt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//DirectedEdge/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//Attribute/weight"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//Node/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

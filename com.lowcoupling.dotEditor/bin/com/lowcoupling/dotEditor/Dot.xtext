@@ -1,0 +1,43 @@
+grammar com.lowcoupling.dotEditor.Dot with org.eclipse.xtext.common.Terminals
+
+generate dot "http://www.lowcoupling.com/dotEditor/Dot"
+
+GraphModel:
+	graph+=Graph*;
+
+Graph : UndirectedGraph|DirectedGraph;
+
+UndirectedGraph:
+	'graph' name=ID '{'
+		(edge+=UnDirectedEdge';')*
+	'}';
+	
+DirectedGraph:
+	'digraph' name=ID '{'
+		(edge+=DirectedEdge';')*
+	'}';
+
+UnDirectedEdge:
+	src=Node '--' tgt =Node ('['attributes+=Attribute*']')?
+;
+
+DirectedEdge:
+	src=Node '->' tgt =Node ('['attributes+=Attribute+']')?
+;
+
+Attribute:
+	'weight''='weight=INT
+;
+
+Node:
+	name=ID
+;
+ GRAPH_LITERAL : "graph";
+
+ EDGEOP_LITERAL
+    :  (  ("->") => "->"
+        | ("--") => "--"
+       )
+    ;
+
+

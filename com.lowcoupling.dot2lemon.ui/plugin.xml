@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.*"
+            id="com.lowcoupling.dot2lemon.ui.popupMenus.contribution.IFile">
+         <menu id="org.eclipse.acceleo.module.menu" label="Acceleo Model to Text" path="additionsAcceleo">
+               <groupMarker name="acceleo"/> 
+         </menu>
+         <action
+               class="com.lowcoupling.dot2lemon.ui.popupMenus.AcceleoGenerateGenerateLEMONCodeAction"
+               enablesFor="+"
+               id="com.lowcoupling.dot2lemon.ui.popupMenus.acceleoGenerateGenerateLEMONCodeAction"
+               icon="icons/default.gif"
+               label="Generate Generate LEMON Code"
+               menubarPath="org.eclipse.acceleo.module.menu/acceleo"/>
+      </objectContribution>
+   </extension>
+</plugin>
